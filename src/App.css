@@ -1,0 +1,60 @@
+.zoom-bar {
+  background: #fafafa;
+  border-bottom: 2px solid #828282;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 10px;
+}
+
+.radio-label {
+  background: #bdc3c7;
+  box-shadow: inset -2px -2px #acb2b7;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 6px;
+  text-align: center;
+  width: 70px;
+}
+
+.radio-label > input[type=radio] {
+  height: 0;
+  margin: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+.radio-label-active {
+  background: #9ea4a8;
+  box-shadow: none;
+}
+
+.gantt-container {
+  height: 500px;
+  width: 100%;
+}
+
+.message-area {
+  background: #ebebeb;
+  border: 1px solid #a4a4a4;
+  font-family: Courier, monospace;
+  height: 200px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.message-area ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.message-area li:before {
+  content: "\003e";
+  padding-right: 10px;
+}
