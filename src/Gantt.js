@@ -39,14 +39,12 @@ export default class Gantt extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps){
-    this.needGanttRedraw = this.props.zoom !== nextProps.zoom;
+  shouldComponentUpdate(nextProps ){
+    return this.props.zoom !== nextProps.zoom;
   }
 
   componentDidUpdate() {
-    if (this.needGanttRedraw) {
-      gantt.render();
-    }
+    gantt.render();
   }
 
   componentDidMount() {
@@ -85,7 +83,7 @@ export default class Gantt extends Component {
         this.props.onLinkUpdated(id, 'deleted');
       }
     });
-  gantt.init(this.ganttContainer);
+    gantt.init(this.ganttContainer);
     gantt.parse(this.props.tasks);
   }
 
