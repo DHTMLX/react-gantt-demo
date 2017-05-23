@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Gantt from './Gantt';
+import Toolbar from './Toolbar';
+import MessageArea from './MessageArea';
 import './App.css';
 
-var data = {
+let data = {
   data: [
     {id: 1, text: 'Task #1', start_date: '15-04-2017', duration: 3, progress: 0.6},
     {id: 2, text: 'Task #2', start_date: '18-04-2017', duration: 3, progress: 0.4}
@@ -50,36 +52,19 @@ class App extends Component {
     this.addMessage(message)
   }
 
-  handleZoomChange(e) {
+  handleZoomChange(zoom) {
     this.setState({
-      currentZoom: e.target.value
+      currentZoom: zoom
     });
   }  
   
   render() {
-    let zoomRadios = ['Hours', 'Days', 'Months'].map((value) => {
-      let isActive = this.state.currentZoom === value;
-      return (
-        <label key={value} className={`radio-label ${isActive ? 'radio-label-active': ''}`}>
-          <input type='radio'
-            checked={isActive}
-            onChange={this.handleZoomChange}
-            value={value}/>
-          {value}
-        </label>
-      );
-    });
-
-    let messages = this.state.messages.map(({key, message}) => {
-      return <li key={key}>{message}</li>
-    });
-
     return (
       <div>
-        <div className="zoom-bar">
-          <b>Zooming: </b>
-          {zoomRadios}
-        </div>
+        <Toolbar
+            zoom={this.state.currentZoom}
+            onZoomChange={this.handleZoomChange}
+        />
         <div className="gantt-container">
           <Gantt
             tasks={data}
@@ -88,11 +73,9 @@ class App extends Component {
             onLinkUpdated={this.logLinkUpdate}
           />
         </div>
-        <div className="message-area">
-          <ul>
-            {messages}
-          </ul>
-        </div>
+        <MessageArea
+            messages={this.state.messages}
+        />
       </div>
     );
   }
