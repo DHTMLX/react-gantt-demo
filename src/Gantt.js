@@ -47,7 +47,12 @@ export default class Gantt extends Component {
     gantt.render();
   }
 
-  componentDidMount() {
+  initGanttEvents() {
+    if(gantt.ganttEventsInitialized){
+      return;
+    }
+    gantt.ganttEventsInitialized = true;
+
     gantt.attachEvent('onAfterTaskAdd', (id, task) => {
       if(this.props.onTaskUpdated) {
         this.props.onTaskUpdated(id, 'inserted', task);
@@ -83,6 +88,10 @@ export default class Gantt extends Component {
         this.props.onLinkUpdated(id, 'deleted');
       }
     });
+  }
+  
+  componentDidMount() {
+    this.initGanttEvents();
     gantt.init(this.ganttContainer);
     gantt.parse(this.props.tasks);
   }
