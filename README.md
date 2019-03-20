@@ -9,15 +9,22 @@ More features can be added due to rich functionality of dhtmlxGantt: https://dht
 
  - clone the repository or download files
  - install dependencies
+~~~
+yarn install
+~~~
+or
 ~~~ 
 npm install 
 ~~~
 
  - run server
 ~~~
+yarn start
+~~~
+or
+~~~
 npm start
 ~~~
-
 
 ###  Related resources
 

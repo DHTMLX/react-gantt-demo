@@ -1,0 +1,18 @@
+.message-area {
+  background: #ebebeb;
+  height: 200px;
+  overflow: auto;
+  padding: 10px;
+  box-sizing:border-box;
+}
+
+.message-area ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.message-area li:before {
+  content: "\003e";
+  padding-right: 10px;
+}
