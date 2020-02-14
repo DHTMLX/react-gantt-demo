@@ -4,22 +4,19 @@ import Toolbar from './components/Toolbar';
 import MessageArea from './components/MessageArea';
 import './App.css';
 
-// static data for our gantt chart
 const data = {
   data: [
-    { id: 1, text: 'Task #1', start_date: '2019-04-15', duration: 3, progress: 0.6 },
-    { id: 2, text: 'Task #2', start_date: '2019-04-18', duration: 3, progress: 0.4 }
+    { id: 1, text: 'Task #1', start_date: '2020-02-12', duration: 3, progress: 0.6 },
+    { id: 2, text: 'Task #2', start_date: '2020-02-16', duration: 3, progress: 0.4 }
   ],
   links: [
     { id: 1, source: 1, target: 2, type: '0' }
   ]
 };
-
-
 class App extends Component {
   state = {
     currentZoom: 'Days',
-    messages: [],
+    messages: []
   };
 
   addMessage(message) {
@@ -77,3 +74,4 @@ class App extends Component {
 }
 
 export default App;
+

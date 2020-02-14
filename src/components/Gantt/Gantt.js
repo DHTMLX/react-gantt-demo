@@ -4,45 +4,50 @@ import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
 
 export default class Gantt extends Component {
 
+  constructor(props) {
+    super(props);
+    this.initZoom();
+  }
+
   // instance of gantt.dataProcessor
   dataProcessor = null;
 
-  /**
-   * applies one of the predefined settings of the time scale
-   */
-  setZoom(value) {
-    switch (value) {
-      case 'Hours':
-        gantt.config.scale_unit = 'day';
-        gantt.config.date_scale = '%d %M';
+  initZoom() {
+    gantt.ext.zoom.init({
+      levels: [
+        {
+          name: 'Hours',
+          scale_height: 60,
+          min_column_width: 30,
+          scales: [
+            { unit: 'day', step: 1, format: '%d %M' },
+            { unit: 'hour', step: 1, format: '%H' }
+          ]
+        },
+        {
+          name: 'Days',
+          scale_height: 60,
+          min_column_width: 70,
+          scales: [
+            { unit: 'week', step: 1, format: 'Week #%W' },
+            { unit: 'day', step: 1, format: '%d %M' }
+          ]
+        },
+        {
+          name: 'Months',
+          scale_height: 60,
+          min_column_width: 70,
+          scales: [
+            { unit: "month", step: 1, format: '%F' },
+            { unit: 'week', step: 1, format: '#%W' }
+          ]
+        }
+      ]
+    });
+  }
 
-        gantt.config.scale_height = 60;
-        gantt.config.min_column_width = 30;
-        gantt.config.subscales = [
-          { unit: 'hour', step: 1, date: '%H' }
-        ];
-        break;
-      case 'Days':
-        gantt.config.min_column_width = 70;
-        gantt.config.scale_unit = 'week';
-        gantt.config.date_scale = '#%W';
-        gantt.config.subscales = [
-          { unit: 'day', step: 1, date: '%d %M' }
-        ];
-        gantt.config.scale_height = 60;
-        break;
-      case 'Months':
-        gantt.config.min_column_width = 70;
-        gantt.config.scale_unit = 'month';
-        gantt.config.date_scale = '%F';
-        gantt.config.scale_height = 60;
-        gantt.config.subscales = [
-          { unit: 'week', step: 1, date: '#%W' }
-        ];
-        break;
-      default:
-        break;
-    }
+  setZoom(value) {
+    gantt.ext.zoom.setLevel(value);
   }
 
   initGanttDataProcessor() {
@@ -69,10 +74,6 @@ export default class Gantt extends Component {
     return this.props.zoom !== nextProps.zoom;
   }
 
-  componentDidUpdate() {
-    gantt.render();
-  }
-
   componentDidMount() {
     gantt.config.xml_date = "%Y-%m-%d %H:%i";
     const { tasks } = this.props;
@@ -97,6 +98,5 @@ export default class Gantt extends Component {
         style={{ width: '100%', height: '100%' }}
       ></div>
     );
-
   }
 }
