@@ -21,9 +21,9 @@ class App extends Component {
 
   addMessage(message) {
     const maxLogLength = 5;
-    const newMessate = { message };
+    const newMessage = { message };
     const messages = [
-      newMessate,
+      newMessage,
       ...this.state.messages
     ];
 
