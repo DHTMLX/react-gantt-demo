@@ -4,11 +4,6 @@ import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
 
 export default class Gantt extends Component {
 
-  constructor(props) {
-    super(props);
-    this.initZoom();
-  }
-
   // instance of gantt.dataProcessor
   dataProcessor = null;
 
@@ -47,6 +42,9 @@ export default class Gantt extends Component {
   }
 
   setZoom(value) {
+    if(!gantt.$initialized){
+      this.initZoom();
+    }
     gantt.ext.zoom.setLevel(value);
   }
 
