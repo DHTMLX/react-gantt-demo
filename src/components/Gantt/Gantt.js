@@ -42,7 +42,7 @@ export default class Gantt extends Component {
   }
 
   setZoom(value) {
-    if(!gantt.$initialized){
+    if(!gantt.ext.zoom.getLevels()){
       this.initZoom();
     }
     gantt.ext.zoom.setLevel(value);
