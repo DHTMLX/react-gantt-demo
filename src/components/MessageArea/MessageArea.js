@@ -1,24 +1,14 @@
-import React, { Component } from 'react';
+function MessageArea({messages}) {
+  let formattedmessages = messages.map((message) => {
+    return <li key={ Math.random() }>{message}</li>
+  });
 
-class MessageArea extends Component {
-  render() {
-    const messages = this.props.messages.map(({ message }) => {
-      return <li key={ Math.random() }>{message}</li>
-    });
-
-    return (
-      <div className="message-area">
+  return <div className="message-area">
         <h3>Messages:</h3>
         <ul>
-          {messages}
+          {formattedmessages}
         </ul>
       </div>
-    );
-  }
 }
-
-MessageArea.defaultProps = {
-  messages: []
-};
 
 export default MessageArea;
