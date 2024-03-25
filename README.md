@@ -1,33 +1,31 @@
-Gantt chart for React.JS
-===================
+# DHTMLX Gantt with React Demo
 
-This is a react gantt chart demo app that is made with the help of dhtmlxGantt. The demo includes implementation of time scale zooming and processing of changes that users can make in gantt chart. 
+[![dhtmlx.com](https://img.shields.io/badge/made%20by-DHTMLX-blue)](https://dhtmlx.com/)
 
-More features can be added due to rich functionality of dhtmlxGantt: https://dhtmlx.com/docs/products/dhtmlxGantt/#product-features
+![DHTMLX Gantt with React Demo](https://raw.githubusercontent.com/DHTMLX/react-gantt-demo/master/gantt.png)
 
-### How to start
+## How to start
 
- - clone the repository or download files
- - install dependencies
-~~~
-yarn install
-~~~
-or
-~~~ 
-npm install 
-~~~
-
- - run server
-~~~
+```
+yarn 
 yarn start
-~~~
-or
-~~~
-npm start
-~~~
+```
 
-###  Related resources
+You can also use [GitHub Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository) to run online.
 
-- Read full tutorial here: https://dhtmlx.com/blog/create-react-gantt-chart-component-dhtmlxgantt/
-- Learn about dhtmlxGantt here: https://dhtmlx.com/docs/products/dhtmlxGantt/
-- Learn about React here: https://facebook.github.io/react/
+## Useful links
+- **[Online demo](https://replit.com/@dhtmlx/dhtmlx-gantt-with-react)**
+- [Full tutorial](https://dhtmlx.com/blog/create-react-gantt-chart-component-dhtmlxgantt/)
+- [Video Guide](https://www.youtube.com/watch?v=AVRHgXQ0g_k)
+- [Learn about DHTMLX Gantt](https://dhtmlx.com/docs/products/dhtmlxGantt/)
+- [More demos about the DHTMLX Gantt functionality](https://docs.dhtmlx.com/gantt/samples)
+- [Technical support ](https://forum.dhtmlx.com/c/gantt)
+- [Online  documentation](https://docs.dhtmlx.com/gantt/)
+
+## Follow us
+
+- Star our GitHub repo :star:
+- Watch our tutorials on [YouTube](https://www.youtube.com/user/dhtmlx/videos) :eyes:
+- Read us on [Medium](https://dhtmlx.medium.com) :newspaper:
+- Follow us on [Twitter](https://twitter.com/dhtmlx) :feet:
+- Like our page on [Facebook](https://www.facebook.com/dhtmlx/) :thumbsup:
