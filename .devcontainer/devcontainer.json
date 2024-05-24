@@ -1,0 +1,9 @@
+{
+  "updateContentCommand": "yarn",
+  "postAttachCommand": "yarn start",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["src/components/Gantt/Gantt.js"]
+    }
+  }
+}
