@@ -10,7 +10,7 @@ There is now an **official React wrapper for DHTMLX Gantt**.
 - [Online documentation](https://docs.dhtmlx.com/gantt/web__react.html)
 - [More details](https://dhtmlx.com/docs/products/dhtmlxGantt-for-React/)
 
-This repository shows a manual creating of Gantt that predates the wrapper.
+This repository demonstrates a manual Gantt integration that predates the wrapper.
 
 ![DHTMLX Gantt with React Demo](https://raw.githubusercontent.com/DHTMLX/react-gantt-demo/master/gantt.png)
 
