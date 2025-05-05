@@ -2,6 +2,14 @@
 
 [![dhtmlx.com](https://img.shields.io/badge/made%20by-DHTMLX-blue)](https://dhtmlx.com/)
 
+**Update (April 2025):**
+
+There is now an **official React wrapper for DHTMLX Gantt**.
+
+- [Quick-start repo](https://github.com/DHTMLX/react-gantt-quick-start)
+- [Online documentation](https://docs.dhtmlx.com/gantt/web__react.html)
+- [More details](https://dhtmlx.com/docs/products/dhtmlxGantt-for-React/)
+
 ![DHTMLX Gantt with React Demo](https://raw.githubusercontent.com/DHTMLX/react-gantt-demo/master/gantt.png)
 
 ## How to start
