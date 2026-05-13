@@ -2,15 +2,15 @@
 
 [![dhtmlx.com](https://img.shields.io/badge/made%20by-DHTMLX-blue)](https://dhtmlx.com/)
 
-**Update (April 2025):**
-
-There is now an **official React wrapper for DHTMLX Gantt**.
-
-- [Quick-start repo](https://github.com/DHTMLX/react-gantt-quick-start)
-- [Online documentation](https://docs.dhtmlx.com/gantt/web__react.html)
-- [More details](https://dhtmlx.com/docs/products/dhtmlxGantt-for-React/)
-
-This repository demonstrates a manual Gantt integration that predates the wrapper.
+> ### Building a new React app with DHTMLX Gantt? Start with the official wrapper.
+>
+> DHTMLX ships an official **React Gantt** wrapper with a declarative component API, typed props, and first-class data binding. It's the recommended starting point for new projects.
+>
+> - Quick-start repo: [react-gantt-quick-start](https://github.com/DHTMLX/react-gantt-quick-start)
+> - Documentation: [docs.dhtmlx.com/gantt/integrations/react/](https://docs.dhtmlx.com/gantt/integrations/react/)
+> - Product page: [dhtmlxGantt for React](https://dhtmlx.com/docs/products/dhtmlxGantt-for-React/)
+>
+> This repo shows the **JS-first integration** — embedding `@dhx/trial-gantt` directly into React. It remains a valid option if you have a specific reason for low-level integration (Individual/GPL edition, deep customization of internals, or an existing JS-first codebase). For most new apps, prefer the wrapper above.
 
 ![DHTMLX Gantt with React Demo](https://raw.githubusercontent.com/DHTMLX/react-gantt-demo/master/gantt.png)
 
